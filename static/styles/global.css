@@ -1,0 +1,177 @@
+@font-feature-values "Inter" {
+    @styleset {
+      disambiguation: 2;
+    }
+  }
+  
+  @font-face {
+    font-display: swap;
+    font-family: "Inter";
+    font-feature-settings: "calt" 0;
+    font-style: normal;
+    font-weight: 100 900;
+    src: url(/static/client/inter-latin.9a3b1bc220d426ef.woff2)
+      format("woff2");
+  }
+  
+  @font-face {
+    font-display: swap;
+    font-family: "Inter";
+    font-feature-settings: "calt" 0;
+    font-style: italic;
+    font-weight: 100 900;
+    src: url(/static/client/inter-italic-latin.fd2627ec16333c05.woff2)
+      format("woff2");
+  }
+  
+  @font-face {
+    font-display: swap;
+    font-family: "Inter";
+    font-feature-settings: "calt" 0;
+    font-style: normal;
+    font-weight: 100 900;
+    src: url(/static/client/inter-latin-extended.02dc98170ff37b88.woff2)
+      format("woff2");
+  }
+  
+  @font-face {
+    font-display: swap;
+    font-family: "Inter";
+    font-feature-settings: "calt" 0;
+    font-style: italic;
+    font-weight: 100 900;
+    src: url(/static/client/inter-italic-latin-extended.0a7409875db33654.woff2)
+      format("woff2");
+  }
+  
+  @font-face {
+    font-display: swap;
+    font-family: "Inter";
+    font-feature-settings: "calt" 0;
+    font-style: normal;
+    font-weight: 100 900;
+    src: url(/static/client/inter-cyrillic.eecfbd79d522303a.woff2)
+      format("woff2");
+  }
+  
+  @font-face {
+    font-display: swap;
+    font-family: "Inter";
+    font-feature-settings: "calt" 0;
+    font-style: italic;
+    font-weight: 100 900;
+    src: url(/static/client/inter-italic-cyrillic.d153dcd2916c4842.woff2)
+      format("woff2");
+  }
+
+
+:root {
+  --font-family-text: "Inter", sans-serif;
+  --font-family-code: "JetBrains Mono", monospace;
+
+  --font-line-content: 1.75;
+  --font-line-normal: 1.5;
+  --font-line-header: 1.25;
+  --font-line-ui: 1;
+
+  --font-size-largest: 2.5rem;
+  --font-size-larger: 2rem;
+  --font-size-large: 1.5rem;
+  --font-size-medium: 1.25rem;
+  --font-size-normal: 1rem;
+  --font-size-small: 0.8rem;
+
+  --font-weight-normal: 400;
+  --font-weight-bold: 600;
+
+
+  --content-width: 720px;
+  --gutter: 16px;
+
+  --bg: #f3f2ed;
+  --text: #03493E;
+  --muted: #2c2d2e;
+
+}
+
+
+html {
+  font-family: var(--font-family-text);
+  font-feature-settings: "calt" 0;
+  font-variant-alternates: styleset(disambiguation);
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+::selection{
+  background-color: var(--text);
+  color: var(--bg);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Main layout container */
+.container {
+  width: 100%;
+  max-width: var(--content-width);
+  padding: 0 var(--gutter);
+}
+
+/* Optional header/footer */
+header, footer {
+  width: 100%;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--gutter) 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Typography defaults for docs/blog feel */
+h1, h2, h3 {
+  line-height: 1.25;
+  margin-top: 1.5em;
+}
+
+p {
+  margin: 1em 0;
+  font-size: var(--font-size-larger);
+  line-height: var(--font-line-header);
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Code blocks */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9em;
+}
+
+pre {
+  padding: 12px;
+  overflow-x: auto;
+  background: #f6f6f6;
+  border-radius: 8px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  :root {
+    --content-width: 100%;
+  }
+
+  .container {
+    padding: 0 14px;
+  }
+}
