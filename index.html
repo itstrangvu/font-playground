@@ -6,6 +6,7 @@
     <title>Font Playground</title>
     <link rel="stylesheet" href="/static/styles/global.css">
     <link rel="stylesheet" href="/static/styles/hero.css">
+    <link rel="stylesheet" href="/static/styles/tabs.css">
     <link rel="preload" href="/static/client/inter-latin.9a3b1bc220d426ef.woff2" 
         as="font" 
         type="font/woff2" 
@@ -20,9 +21,26 @@
 </head>
 <body>
     <div class="container">
-        <header>/Font playground/</header>
-        <main class="hero">
-            <div class="stamp"><span class="visual">&#10047;</span></div>
+        <!-- state -->
+        <input type="radio" name="tabs" id="basic" checked>
+        <input type="radio" name="tabs" id="elegant">
+        <input type="radio" name="tabs" id="natural">
+        <input type="radio" name="tabs" id="tech">
+        <header>
+            <div class="tabs">
+                <!-- tablist -->
+                <div role="tablist" aria-orientation="horizontal" class="tabs-list">
+                    <label role="tab" for="basic" class="tab">Basic</label>
+                    <label role="tab" for="elegant" class="tab">Elegant</label>
+                    <label role="tab" for="natural" class="tab">Natural</label>
+                    <label role="tab" for="tech" class="tab">Tech</label>
+                </div>
+    
+            </div>
+        </header>
+
+        <main class="content">
+            <!-- <div class="stamp"><span class="visual">&#10047;</span></div> -->
             <h1>Selfcare thoughts lately</h1>
             <p>Is there anything cozier than soup? Soup or broth makes a delicious and nutritive breakfast in the colder months and 
                 it's an ideal lunch on-the-go in a thermos/cup/jar. And if you have to work through lunch, it's a subtle, sippable meal during meetings.

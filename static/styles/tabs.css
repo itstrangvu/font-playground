@@ -1,0 +1,104 @@
+.tabs {
+    /* width: 100%; */
+  }
+  
+  /* TAB LIST */
+  .tabs-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    width: fit-content;
+    height: 32px;
+  
+    padding: 3px;
+  
+    border-radius: 10px;
+  
+    background: rgba(0, 0, 0, 0.04);
+  
+    box-sizing: border-box;
+  }
+  
+  /* TAB */
+  .tab {
+    position: relative;
+  
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  
+    height: calc(100% - 2px);
+    padding: 0 10px;
+  
+    font-family: var(--font-family-text);
+    font-size: 15px;
+    line-height: var(--font-line-ui);
+    font-weight: var(--font-weight-normal);
+  
+    border-radius: 8px;
+  
+    cursor: pointer;
+    user-select: none;
+  
+    color: color-mix(in srgb, var(--text) 55%, transparent);
+  
+    transition: background 150ms ease, color 150ms ease;
+  }
+
+  .container input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    pointer-events: none;
+  }
+  
+  /* hover */
+  .tab:hover {
+    color: var(--text);
+  }
+  
+  /* focus */
+  .tab:focus-visible {
+    outline: 2px solid color-mix(in srgb, var(--text) 40%, transparent);
+    outline-offset: 2px;
+  }
+  
+  /* ACTIVE STATES */
+  #basic:checked ~ header .tabs .tabs-list label[for="basic"],
+  #elegant:checked ~ header .tabs .tabs-list label[for="elegant"],
+  #natural:checked ~ header .tabs .tabs-list label[for="natural"],
+  #tech:checked ~ header .tabs .tabs-list label[for="tech"] {
+    background: var(--bg);
+    color: var(--text);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  }
+  
+  /* PANELS */
+  .panel {
+    display: none;
+    padding-top: 16px;
+    max-width: var(--content-width);
+  }
+  
+  /* active tabs */
+  #basic:checked ~ .content {
+    --active-font: var(--font-family-text);
+  }
+  
+  #elegant:checked ~ .content {
+    --active-font: Georgia, serif;
+  }
+  
+  #natural:checked ~ .content {
+    --active-font: "Times New Roman", serif;
+  }
+  
+  #tech:checked ~ .content {
+    --active-font: ui-monospace, monospace;
+  }
+  
+  .content {
+    font-family: var(--active-font, var(--font-family-text)) !important;
+  }
