@@ -1,3 +1,14 @@
-.hero i {
+.visual {
     font-size: 4rem;
+    color: var(--bg);
+}
+
+.stamp {
+    display: flex;
+    padding: var(--gutter);
+    background-color: var(--text);
+    border: 1px solid var(--text);
+    align-items: center;
+    border-radius: 6px;
+    justify-content: center;
 }
